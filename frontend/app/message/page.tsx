@@ -6,7 +6,7 @@ export default function Message(){
 
     const [data, setData] = useState(null);
 
-    //NEEDS REAL CHAT ID 
+
     const [chat_id, setChat] = useState(null);
 
    const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {

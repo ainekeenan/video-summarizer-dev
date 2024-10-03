@@ -4,9 +4,13 @@ from youtube_transcript_api import YouTubeTranscriptApi as yt
 import re
 import google.generativeai as genai
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Configure generative AI
-genai.configure(api_key="")
+genai.configure(api_key= os.getenv('GEMINI_KEY'))
 
 # Define the generative model
 model = genai.GenerativeModel(model_name="gemini-1.0-pro")
